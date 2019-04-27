@@ -1,12 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<h1>My Blog Ruby Empowers</h1>
+<br>
 
     <% @posts.each do |post| %>
       <p>
-        <%= link_to post.titulo, post %>
-        <%= post.conteudo %>
-        <p>
+       <h1> <%= link_to post.titulo, post %> </h1>
+      </p>  
+      <p>
+        <h3> <%= post.conteudo %> </h3>
+      </p>
         <%= link_to 'Edit', edit_post_path(post) %>
         <%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
         </p>
